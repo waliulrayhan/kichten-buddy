@@ -98,8 +98,8 @@ Mofa's Kitchen Buddy is a backend system designed to help users manage ingredien
 ### 3. Environment Variables:
 Create a `.env` file in the root directory and add the following:
 ```
-DATABASE_URL="YOUR_DATABASE_URL"
-GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+DATABASE_URL="postgres://avnadmin:AVNS_HaeoIxwyyXoDnAiXXDW@pg-13979dc8-nahid253632-393e.l.aivencloud.com:13602/defaultdb?sslmode=require"
+GEMINI_API_KEY=AIzaSyAG9PzHuqhosxXKjwqPrUxjabtTJypHZCk
 ```
 
 ### 4. Database Migration:
