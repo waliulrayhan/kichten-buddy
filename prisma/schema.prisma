@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Table for storing ingredients
+model Ingredient {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  quantity    Int
+  unit        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Table for storing recipes
+model Recipe {
+  id            String         @id @default(uuid())
+  title         String
+  description   String?
+  ingredients   Json
+  steps         String
+  isFavorite    Boolean         @default(false)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  // Relation to RecipeMedia
+  media         RecipeMedia[]   // One-to-many relation with RecipeMedia
+}
+
+// Table for storing recipe images or text
+model RecipeMedia {
+  id          String   @id @default(uuid())
+  recipeId    String
+  mediaType   String   // e.g., 'image' or 'text'
+  content     String   // Base64 encoded image or plain text
+  createdAt   DateTime @default(now())
+
+  Recipe      Recipe   @relation(fields: [recipeId], references: [id])
+}
+
+// Table for chatbot logs
+model ChatLog {
+  id          String   @id @default(uuid())
+  userMessage String
+  botResponse String
+  createdAt   DateTime @default(now())
+}
+
+// For user preferences to save favorite categories or preferences
+model UserPreference {
+  id              String   @id @default(uuid())
+  preferenceKey   String   @unique
+  preferenceValue String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
