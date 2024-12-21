@@ -10,7 +10,7 @@ Mofa's Kitchen Buddy is a backend system designed to help users manage ingredien
 
 2. **Recipe Management:**
    - Store favorite recipes with descriptions, ingredients, and preparation steps.
-   - Support for recipe media (images or text).
+   - Support for recipe media (text).
 
 3. **Chatbot Integration:**
    - Interact with the chatbot to get recipe suggestions based on available ingredients.
@@ -20,7 +20,7 @@ Mofa's Kitchen Buddy is a backend system designed to help users manage ingredien
 
 ## Technology Stack
 - **Frontend Framework:** Next.js
-- **Backend Framework:** Prisma ORM with Node.js
+- **Backend Framework:** Prisma ORM with TypeScript
 - **Database:** PostgreSQL hosted on Aiven Cloud
 - **AI Integration:** Google Gemini API
 
@@ -37,8 +37,8 @@ Mofa's Kitchen Buddy is a backend system designed to help users manage ingredien
 ### 2. Installation:
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd mofa-kitchen-buddy
+   git clone https://github.com/waliulrayhan/kichten-buddy
+   cd kichten-buddy
    ```
 2. Install dependencies:
    ```bash
@@ -48,8 +48,8 @@ Mofa's Kitchen Buddy is a backend system designed to help users manage ingredien
 ### 3. Environment Variables:
 Create a `.env` file in the root directory and add the following:
 ```
-DATABASE_URL="postgres://<username>:<password>@<host>:<port>/<database>?sslmode=require"
-GEMINI_API_KEY="<your-gemini-api-key>"
+DATABASE_URL="YOUR_DATABASE_URL"
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 ```
 
 ### 4. Database Migration:
@@ -176,31 +176,22 @@ npm run dev
 
 ---
 
-## Deployment
-- Ensure the PostgreSQL database is hosted on Aiven Cloud.
-- Deploy the app on Vercel or any cloud provider supporting Next.js.
-
----
-
-## Future Improvements
-- **Image Processing for Recipes:** Use OCR to parse text from recipe images.
-- **Advanced Preferences Handling:** Allow the chatbot to learn preferences over time.
-- **Shopping List Integration:** Generate shopping lists based on missing ingredients.
-- **Mobile Support:** Develop a mobile app for easier access.
-
----
-
 ## License
 This project is licensed under the MIT License.
 
 ---
 
-## Authors
-- **Developer:** [Your Name]  
-- **Contact:** [Your Email]
+## Team Members
+- **Member 01:** [Md. Waliul Islam Rayhan]  
+- **Contact:** [waliulrayhan@gmail.com]
+
+- **Member 02:** [Nishat Mahmud]  
+- **Contact:** [nishatrhythm@gmail.com]
+
+- **Member 03:** [Md. Nahid Hasan]  
+- **Contact:** [nahid515023@gmail.com]
 
 ---
 
 ## Feedback
 For feedback or issues, please submit them via the [GitHub Issues](<repository-url>/issues) section.
-
