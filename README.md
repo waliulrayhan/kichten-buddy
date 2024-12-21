@@ -1,4 +1,54 @@
-# Mofa's Kitchen Buddy
+# Challenge 1 - Jupyter Notebook
+
+## Overview
+
+This repository contains the Jupyter Notebook file Challenge_1.ipynb.  
+The notebook is designed to perform data analysis and/or visualization tasks, as part of a challenge or project.
+
+## File Contents
+
+- *Filename:* Challenge_1.ipynb
+- *Total Cells:* 10
+- *Code Cells:* 10
+- *Markdown Cells:* 0
+
+## Description
+
+This notebook contains Python code, visualizations, and explanations to solve the given challenge.
+
+## Requirements
+
+To run this notebook, make sure you have the following installed:
+- Python 3.x
+- Jupyter Notebook or Jupyter Lab
+- Required Python libraries (specified in the notebook or requirements.txt if provided)
+
+### Installation
+
+1. Clone the repository:  
+   bash
+   git clone <repository-url>
+   cd <repository-name>
+   
+2. Create a virtual environment (optional but recommended):  
+   bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use 'venv\Scripts\activate'
+   
+3. Install dependencies:  
+   bash
+   pip install -r requirements.txt
+   
+
+### Usage
+
+To open the notebook, run:
+bash
+jupyter notebook Challenge_1.ipynb
+
+
+
+# Challenge 2 - Mofa's Kitchen Buddy
 
 ## Overview
 Mofa's Kitchen Buddy is a backend system designed to help users manage ingredients and suggest recipes based on available items at home. It leverages a cloud database and a Large Language Model (LLM) chatbot for smart recipe recommendations.
